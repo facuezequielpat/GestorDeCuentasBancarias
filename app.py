@@ -24,7 +24,7 @@ app.secret_key='mysecretkey'#La clave secreta se utiliza para proteger datos sen
 #Debe ser suficientemente compleja para evitar que sea adivinada fácilmente por terceros.
 @app.route('/')
 def Index():
-    cursor=mysql.connection.cursor()
+    cursor=mysql.connection.cursor()# conecta el cursor
     cursor.execute(
                     """SELECT p.dni,p.nombre,p.apellido,
                     d.deposito,d.retiro,d.saldo, d.fechaIngreso FROM persona p INNER JOIN dep_ret d ON p.dni=d.dni_dep_ret""")
@@ -163,3 +163,4 @@ def historial_dni(dni):
 
 if __name__ == '__main__':# Si lo que se esta ejecutando es el archivo principal
     app.run(port=3000,debug=True)
+
