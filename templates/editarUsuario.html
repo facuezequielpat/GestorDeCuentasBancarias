@@ -1,0 +1,31 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+
+{% with mensajes = get_flashed_messages() %}
+{% if mensajes %}
+{% for mensaje in mensajes %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{ mensaje }}  
+</div>
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div class="row">
+  <div class="col-md-11">
+    <div class="card card-body">
+      <form action="/Editar_todo/{{usuario.0}}" method="POST">
+        <input type="text" name="dni" placeholder="dni" value= {{usuario.0}}>
+        <input type="text" name="nombre" placeholder="nombre" value= {{usuario.1}}>
+        <input type="text" name="apellido" placeholder="apellido" value= {{usuario.2}}>
+        <input type="text" name="deposito" placeholder="Cuanto va a depositar?" value=0>
+        <input type="text" name="retiro" placeholder="Cuanto va a retirar?" value=0>
+        <button type="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

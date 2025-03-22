@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<table class="table table-dark table-primary table-bordered bg-gradient">
+  <thead>
+    <tr>
+      <td class="table-light">ID</td>
+      <td class="table-light">FECHA</td>
+      <td class="table-light">HECHO</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for usuario in usuarios %}
+    <tr>
+      <td>{{usuario.0}}</td>
+      <td>{{usuario.1}}</td>
+      <td>{{usuario.2}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

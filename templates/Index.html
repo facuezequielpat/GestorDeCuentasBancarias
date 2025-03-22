@@ -1,0 +1,90 @@
+<!-- MDN  DOCUMENTACION DE HTML-->
+{% extends 'layout.html' %}<!--extends: Esta etiqueta indica que esta plantilla extiende otra plantilla llamada 'layout.html'. 
+  Esto significa que esta plantilla utilizará el contenido de 'layout.html' como base y podrá modificar 
+  o agregar secciones según sea necesario.-->
+
+{% block body %}<!--block: Define un bloque llamado body. Este bloque será utilizado en la plantilla base 'layout.html'
+  para insertar contenido específico de esta plantilla en ese lugar.-->
+
+{% with mensajes = get_flashed_messages() %}<!--with: Crea un contexto temporal donde se asigna la variable mensajes al resultado 
+  de la función get_flashed_messages(). Esta función es de Flask y se utiliza para obtener 
+  los mensajes flash almacenados en la sesión.-->
+{% if mensajes %}<!--if: Comienza una estructura condicional que verifica si la variable mensajes está presente y no vacía.-->
+{% for mensaje in mensajes %}<!--for: Inicia un bucle que itera sobre cada elemento de la lista mensajes.
+-->
+<div class="alert alert-success alert-dismissible fade show" role="alert"><!--Aquí se muestra cada mensaje flash en un contenedor de alerta de color verde (alerta de éxito)
+  utilizando clases de Bootstrap. El contenido del mensaje se inserta dentro del contenedor
+  utilizando {{ mensaje }}, que es la sintaxis de Jinja para imprimir variables en la plantilla.-->
+  {{ mensaje }}  
+</div>
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<!-- Se cierran los bloques for, if y with.-->
+
+
+<h2>App de Banco</h2>
+<p>En esta sección se encuentran las opciones para el guardado de usuario, editar el usuario, eliminar el usuario, ver el historial del usuario </p><!-- Usar alt Z para acomodar los parrafos-->
+<p>Completa las casillas para guardar un nuevo usuario</p>
+
+
+
+<div class="row">
+  <div class="col-md-11">
+    <div class="card card-body">
+      <form action="/Registrar_usuario"method='POST'>
+        <input type="text" name="dni" placeholder="dni" >
+        <input type="text" name="nombre" placeholder="nombre" >
+        <input type="text" name="apellido" placeholder="apellido" >
+        <input type="text" name="deposito" placeholder="deposito" >
+        <input type="text" name="retiro" placeholder="retiro" >
+        <button tipe="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-11">
+    <table class="table table-striped table-bordered bg-white table-sm">
+      <thead>
+        <tr>
+          <td>Dni</td>
+          <td>Nombre</td>
+          <td>Apellido</td>
+          <td>Deposito</td>
+          <td>Retiro</td>
+          <td>Saldo</td>
+          <td>Fecha de ingreso</td>
+          <td>Operaciones</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for usuario in usuarios %}
+        <tr>
+          <td>{{usuario.0}}</td>
+          <td>{{usuario.1}}</td>
+          <td>{{usuario.2}}</td>
+          <td>{{usuario.3}}</td>
+          <td>{{usuario.4}}</td>
+          <td>{{usuario.5}}</td>
+          <td>{{usuario.6}}</td>
+          <td>
+            <a href="{{ url_for('seleccionar_usuario', dni=usuario.0) }}" class="btn btn-secondary">Editar</a>
+            <a href="/Eliminar_usuario/{{usuario.0}}"class="btn btn-danger">Eliminar</a>
+            <a href="/Historial/{{usuario.0}}" class="btn btn-info">Historial</a>
+          </td>
+    
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
