@@ -57,7 +57,7 @@ cd GestorDeCuentasBancarias
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate    # Windows
-pip install -r requirements.txt</code></pre>
+pip install flask flask_mysqldb</code></pre>
     <h2 id="database-setup">Database Setup</h2>
     <ol>
         <li>Create MySQL database:
