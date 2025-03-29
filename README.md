@@ -52,8 +52,8 @@ It allows basic banking operations such as:
         <li>🔄 CRUD operations</li>
     </ul>
     <h2 id="installation">Installation</h2>
-    <pre><code>git clone https://github.com/yourusername/banking-system.git
-cd banking-system
+    <pre><code>git clone https://github.com/facuezequielpat/GestorDeCuentasBancarias
+cd GestorDeCuentasBancarias
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate    # Windows
