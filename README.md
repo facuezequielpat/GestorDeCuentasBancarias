@@ -42,14 +42,6 @@ It allows basic banking operations such as:
         <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
         <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
     </p>
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#database-setup">Database Setup</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#project-structure">Project Structure</a></li>
-        <li><a href="#license">License</a></li>
     </ul>
     <h2 id="features">Features</h2>
     <ul class="feature-list">
@@ -89,6 +81,6 @@ pip install -r requirements.txt</code></pre>
 │   └── historial.html
 └── requirements.txt</pre>
     <h2 id="license">License</h2>
-    <p>MIT © <a href="https://github.com/yourusername">Your Name</a></p>
+    <p>MIT © <a href="https://github.com/facuezequielpat">Facundo Ezequiel Patiño</a></p>
 </body>
 </html>
