@@ -36,12 +36,6 @@ It allows basic banking operations such as:
  <!DOCTYPE html>
 <html lang="en">
 <body>
-    <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-        <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-        <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-        <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
-    </p>
     </ul>
     <h2 id="features">Features</h2>
     <ul class="feature-list">
@@ -52,12 +46,21 @@ It allows basic banking operations such as:
         <li>🔄 CRUD operations</li>
     </ul>
     <h2 id="installation">Installation</h2>
-    <pre><code>git clone https://github.com/facuezequielpat/GestorDeCuentasBancarias
+    <ol>
+     <li>Setting Up a Virtual Environment:
+         <pre><code>git clone https://github.com/facuezequielpat/GestorDeCuentasBancarias
 cd GestorDeCuentasBancarias
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate    # Windows
-pip install flask flask_mysqldb</code></pre>
+python -m venv venv</code></pre>
+     </li>
+     <li>Activate Virtual Environment (From CMD):
+         <pre><code>source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate    # Windows< Banco.sql</code></pre>
+     </li>
+     <li>Install Frameworks:
+         <pre><code>pip install flask flask_mysqldb
+         </code></pre>
+    </li>
+    </ol>
     <h2 id="database-setup">Database Setup</h2>
     <ol>
         <li>Create MySQL database:
