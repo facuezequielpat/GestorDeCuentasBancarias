@@ -54,7 +54,7 @@ python -m venv venv</code></pre>
      </li>
      <li>Activate Virtual Environment (From CMD):
          <pre><code>source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate    # Windows< Banco.sql</code></pre>
+venv\Scripts\activate    # Windows</code></pre>
      </li>
      <li>Install Frameworks:
          <pre><code>pip install flask flask_mysqldb
