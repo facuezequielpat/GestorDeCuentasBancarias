@@ -45,7 +45,7 @@ It allows basic banking operations such as:
         <li>🕵️ Transaction history tracking</li>
         <li>🔄 CRUD operations</li>
     </ul>
-    <h2 id="installation">Installation</h2>
+    <h2 id="Instructions">Setup Instructions</h2>
     <ol>
      <li>Setting Up a Virtual Environment:
          <pre><code>git clone https://github.com/facuezequielpat/GestorDeCuentasBancarias
@@ -57,22 +57,20 @@ python -m venv venv</code></pre>
 venv\Scripts\activate    # Windows</code></pre>
      </li>
      <li>Install Frameworks:
-         <pre><code>pip install flask flask_mysqldb
-         </code></pre>
-    </li>
+         <pre><code>pip install flask flask_mysqldb</code></pre>
+     </li>
+     <li>Configure database:
+<ul><li>Execute Banco.sql script in MySQL</li>
+<li>Verify credentials in app.py (lines 12-15)</li></ul>
+     <br>
+     </li>
+     <li>Run the application:
+      <pre><code>python app.py</code></pre>
+     </li>
+     <li>Access the application:<br>
+      Open in browser: <pre><a href="http://localhost:3000">http://localhost:3000</a></pre>
+     </li>
     </ol>
-    <h2 id="database-setup">Database Setup</h2>
-    <ol>
-        <li>Create MySQL database:
-            <pre><code>CREATE DATABASE banco;</code></pre>
-        </li>
-        <li>Import schema:
-            <pre><code>mysql -u username -p banco < Banco.sql</code></pre>
-        </li>
-    </ol>
-    <h2 id="usage">Usage</h2>
-    <pre><code>python app.py</code></pre>
-    <p>Access at: <a href="http://localhost:3000">http://localhost:3000</a></p>
     <h2 id="project-structure">Project Structure</h2>
     <pre>banking-system/
 ├── app.py
